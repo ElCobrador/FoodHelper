@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
+    <v-app-bar app color="primary">
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -20,16 +20,14 @@
           width="100"
         />
       </div>
-
-      <v-spacer></v-spacer>
-
-      <v-toolbar-items class="hidden-sm-and-down">
+      <v-spacer/>
+      <v-toolbar-items class="hidden-sm-and-down navigation-section" >
         <router-link to="/">
-          <v-btn flat> Home </v-btn>
+          <v-btn> Home </v-btn>
         </router-link>
 
         <router-link to="/about">
-          <v-btn flat> About </v-btn>
+          <v-btn> About </v-btn>
         </router-link>
       </v-toolbar-items>
     </v-app-bar>
@@ -48,3 +46,12 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+.navigation-section {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+}
+</style>
